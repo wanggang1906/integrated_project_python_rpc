@@ -8,3 +8,6 @@ scikit_learn==0.22.2
 pandas==0.25.3
 seaborn==0.10.0
 tensorflow==2.0.0
+jieba
+wordcloud==1.6.0
+imageio==2.8.0
