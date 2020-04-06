@@ -11,7 +11,8 @@ import sys
 def integerPro(c, A, b, Aeq, beq,t=1.0E-12):
     sys.setrecursionlimit(1000000) # 更改系统最大递归深度为1W次
     res = linprog(c, A_ub=A, b_ub=b, A_eq=Aeq, b_eq=beq) # 线性规划
-    bestVal = sys.maxsize
+    bestVal = sys.maxsize # 系统的最大值
+    print("系统的最大值：",bestVal)
     bestX = res.x
     if not(type(res.x) is float or res.status != 0):
         bestVal = sum([x*y for x,y in zip(c, bestX)])
@@ -60,5 +61,5 @@ if __name__ == '__main__':
     b = [-5, -3]
     Aeq = [[0, 0, 0]]
     beq = [0]
-    #print(integerPro(c, A, b, Aeq, beq))
+    print(integerPro(c, A, b, Aeq, beq))
     LinearProgramming()
