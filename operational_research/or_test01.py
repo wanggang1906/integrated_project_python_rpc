@@ -6,6 +6,16 @@
 import math
 from scipy.optimize import linprog #
 import sys
+import time
+
+# 显示递归次数
+def decorator(fun):
+    def wrapper():
+        start = time.time()
+        fun()
+        runTime = time.time() - start
+        print(runTime)
+    return wrapper
 
 # 出现递归无法收敛
 def integerPro(c, A, b, Aeq, beq,t=1.0E-12):
