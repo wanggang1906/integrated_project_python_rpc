@@ -10,5 +10,8 @@ dat <- data.frame(
   total_bill = c(14.89, 17.23)
 )
 dat
+print(dat)
 ggplot(data=dat, aes(x=time, y=total_bill, fill=time)) +
     geom_bar(stat="identity")
+
+print(ggplot)
