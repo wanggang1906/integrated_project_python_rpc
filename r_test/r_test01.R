@@ -3,6 +3,8 @@
 # Created by: wang gang
 # Created on: 2020/4/21
 # r测试
+# r的基本操作
+
 
 a <- array(c('green','yellow'),dim = c(3,3,2))
 # c()将元素组合成向量，向量是基本数据类型，许多原子向量可组成数组
